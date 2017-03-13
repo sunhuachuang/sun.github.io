@@ -1,4 +1,4 @@
-##laravel vs symfony 比较学习
+## laravel vs symfony 比较学习
 
 ### same
 1.dump() -> debug

@@ -1,13 +1,30 @@
 # sun-blog
 this is personal blog by sunhuachuang
----
-##技术交流
-[PHP学习笔记](https://github.com/sunhuachuang/sun-blog/blob/master/program/php/php-remeber-note.md)---program  
-[对redux的几个案例的简单分析](https://github.com/sunhuachuang/sun-blog/blob/master/program/react/redux-example-analysis.md)---program  
-[add listener before opeate mysql（在操作数据库前监听doctrine事件）](https://github.com/sunhuachuang/sun-blog/blob/master/program/symfony/listener-before-or-after-operational-database-mysql.md) ---program-symfony  
-[restful api for login and register when use fosuserbundle in symfony3. (by guard)](https://github.com/sunhuachuang/sun-blog/blob/master/program/symfony/restful-api-login-register-fosuerbundle-symfony3-guard.md) ---program-symfony  
-[laravel vs symfony 比较学习](https://github.com/sunhuachuang/sun-blog/blob/master/program/symfony/laravel-vs-symfony.md) ---program-symfony  
-[flask项目的结构浅议](https://github.com/sunhuachuang/sun-blog/blob/master/program/flask/flask-dir.md) ---program-python-flask  
+## sunhuachuang.github.io
+### 一次期
+1. index.html 每次改一次 加新的内容链接，个数或者新分类
+1. 2017.html 每次改一次　加新的内容链接
+1. 文件夹　　每次改一次　加新的内容链接
 
-##思想随笔
-[现代私塾的发展分析](https://github.com/sunhuachuang/sun-blog/blob/master/think/nowadays-education-of-classic-book-in-china.md)---think  
+### 一年期
+1. 2016.html　一年改一次　加 year
+1. base.html 一年改一次 加 year
+1. about.html　一年改一次　加 year
+
+---
+## 技术交流
+###  2016年以前的文章
+[PHP学习笔记]()
+
+[对redux的几个案例的简单分析]()
+
+[add listener before opeate mysql（在操作数据库前监听doctrine事件）]()
+
+[restful api for login and register when use fosuserbundle in symfony3. (by guard)]()
+
+[laravel vs symfony 比较学习]()
+
+[flask项目的结构浅议]()
+
+#### 思想随笔
+[现代私塾的发展分析]()
