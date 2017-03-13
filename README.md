@@ -22,8 +22,6 @@ this is personal blog by sunhuachuang
 
 [restful api for login and register when use fosuserbundle in symfony3. (by guard)]()
 
-[laravel vs symfony 比较学习]()
-
 [flask项目的结构浅议]()
 
 #### 思想随笔
