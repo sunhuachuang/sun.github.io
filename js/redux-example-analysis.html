@@ -40,38 +40,38 @@
           <p>index.js: 进入js(react-redux的标准构造)</p>
           <p>webpack.config.js: webpack打包配置 输入输出配置</p>
           <h4>次要的</h4>
-          <p>server.js: 后台server
+          <p>server.js: 后台server</p>
           <p>package.json: node包管理</p>
           <p>d-node_modules: npm包</p>
-          <p>d-test</p>
-          <h3>render单纯的处理store与action</h3>
-          <p>如果数据需要和服务器交互的化，action里面的data在传到render之前便处理好,
-            处理的过程就在middleware。
-            render处理增删改查与动作逻辑都是单纯的。都是类似的。</p>
-          <p>redux 中的 combineReducers 用于将reducer模块化，分割开。名称相同。</p>
-          <p>dispatch一般是一个可用于回调的函数。即dispatch(action)</p>
-          <h4>containers中:</h4>
-          <p>react-redux 中的connent方法就是将state与dispatch方法通过mapStateToProps与mapDispatchToProps当成props传到react中</p>
-          <p>redux 中的 bindActionCreators 方法，将action自动转化为dispatch回调函数。名称相同。
-            异步执行的dispatch,调用的时候用回调函数的方式。</p>
-          <p>store是一个数据整体。全局唯一一个数据来源。可以在其中以数组形式存入不同数据。json形式的数据.</p>
-          <p>action也是json形式的数据。</p>
-          <p>初始化时候的store，可以传入initialState作为初始化用的store. 也可以不传。</p>
-          <h4>todomvc</h4>
-          <p>目录基本一致</p>
-          <p>初始化执行流程：<pre>index.html->index.js->store(空(action)->render)->container(app.js)->components(head main)</pre></p>
-          <h3>注意点：</h3>
-          <p>babel-core polyfill 构建完整的es6运行环境 必须放在最开头</p>
-          <h4>todo-with-undo 操作的撤销与不撤销</h4>
-          <p>redux-undo ActionCreators
-            dispatch(ActionCreators.undo())
-            dispatch(ActionCreators.redo())</p>
-          <h4>async异步加载</h4>
-          <p>需要middleware与logger</p>
-          <p>更新两遍stroe，即ui, 第一遍的时候更新更新名称以及指示需要更新。
-            更新完随即检查指示，是否再异步更新。</p>
-          <p>初始化的store数据为空，但是有结构存在。根据reducer生成</p>
-          <p>执行过程：<pre>
+            <p>d-test</p>
+            <h3>render单纯的处理store与action</h3>
+            <p>如果数据需要和服务器交互的化，action里面的data在传到render之前便处理好,
+              处理的过程就在middleware。
+              render处理增删改查与动作逻辑都是单纯的。都是类似的。</p>
+            <p>redux 中的 combineReducers 用于将reducer模块化，分割开。名称相同。</p>
+            <p>dispatch一般是一个可用于回调的函数。即dispatch(action)</p>
+            <h4>containers中:</h4>
+            <p>react-redux 中的connent方法就是将state与dispatch方法通过mapStateToProps与mapDispatchToProps当成props传到react中</p>
+            <p>redux 中的 bindActionCreators 方法，将action自动转化为dispatch回调函数。名称相同。
+              异步执行的dispatch,调用的时候用回调函数的方式。</p>
+            <p>store是一个数据整体。全局唯一一个数据来源。可以在其中以数组形式存入不同数据。json形式的数据.</p>
+            <p>action也是json形式的数据。</p>
+            <p>初始化时候的store，可以传入initialState作为初始化用的store. 也可以不传。</p>
+            <h4>todomvc</h4>
+            <p>目录基本一致</p>
+            <p>初始化执行流程：<pre>index.html->index.js->store(空(action)->render)->container(app.js)->components(head main)</pre></p>
+            <h3>注意点：</h3>
+            <p>babel-core polyfill 构建完整的es6运行环境 必须放在最开头</p>
+            <h4>todo-with-undo 操作的撤销与不撤销</h4>
+            <p>redux-undo ActionCreators
+              dispatch(ActionCreators.undo())
+              dispatch(ActionCreators.redo())</p>
+            <h4>async异步加载</h4>
+            <p>需要middleware与logger</p>
+            <p>更新两遍stroe，即ui, 第一遍的时候更新更新名称以及指示需要更新。
+              更新完随即检查指示，是否再异步更新。</p>
+            <p>初始化的store数据为空，但是有结构存在。根据reducer生成</p>
+            <p>执行过程：<pre>
  index.html->index.js->
  store(
     render->store{
@@ -129,49 +129,49 @@
           lastUpdated: receivedAt
     }
  }
-          </pre></p>
-          <h4>universal</h4>
-          <h3>执行流程：</h3>
-          <pre>`
+            </pre></p>
+            <h4>universal</h4>
+            <h3>执行流程：</h3>
+            <pre>`
 server/server.js -> client/index.js -> common/store/configureStore.js({"counter":45})
 {
     reducers.js=>({"counter":45}, null)=>store{"counter":45};
 }
 ->containers/app.js->component/counter.js
 ->dispatch(increment)->action:{type:INCREMENT<em>COUNTER}->reducers.js:
-{
-    ({"counter":45}, {type:INCREMENT</em>COUNTER}) => {"counter":45}
+              {
+              ({"counter":45}, {type:INCREMENT</em>COUNTER}) => {"counter":45}
 }
 ->containers/app.js->component/counter.js
 ->dispatch(incrementIfOdd)->dispatch(increment)->...
 //thunk 中间件的实质就是可以在dispatch中加入其他的dispatch
 ->dispatch(incrementAsync)->setTimeout(dispatch(increment), 1000)->...
-          </pre>
-          <h4>real-wrold</h4>
-          <h3>目录</h3>
-          <p>d-actions</p>
-          <p>d-components</p>
-          <p>d-containers</p>
-          <p>d-middleware /api.js</p>
-          <p>d-reducers</p>
-          <p>d-store</p>
-          <p>routes.js /路由</p>
-          <p>server.js</p>
-          <p>index.js</p>
-          <p>index.html</p>
-          <p>package.json</p>
-          <p>webpack.config.js</p>
-          <p>d-node_modules</p>
-          <pre>state结构
+            </pre>
+            <h4>real-wrold</h4>
+            <h3>目录</h3>
+            <p>d-actions</p>
+            <p>d-components</p>
+            <p>d-containers</p>
+            <p>d-middleware /api.js</p>
+            <p>d-reducers</p>
+            <p>d-store</p>
+            <p>routes.js /路由</p>
+            <p>server.js</p>
+            <p>index.js</p>
+            <p>index.html</p>
+            <p>package.json</p>
+            <p>webpack.config.js</p>
+            <p>d-node_modules</p>
+            <pre>state结构
 {
     entities: {},
     pagination: string,
     errorMessage: string,
     router: string,
 }
-          </pre>
-          <h3>执行流程：</h3>
-          <p><pre>
+            </pre>
+            <h3>执行流程：</h3>
+            <p><pre>
 index.htnl-&gt;index.js(store=null)-&gt;container/root.js
 -&gt;redux-router:path("/")-&gt;container/app.js: props
 {
@@ -183,7 +183,14 @@ index.htnl-&gt;index.js(store=null)-&gt;container/root.js
 }
 -&gt;component/Explore.js
 -&gt;handleChange()-&gt;pushState(null, `/${nextValue}
-          </pre></p>
+            </pre>
+            </p>
+            <nav>
+              <ul class="pager">
+                <li style="float:left;padding-left:2em;"><a href="/python/flask-dir.html"><< flask 目录结构</a></li>
+                <li style="float:right;padding-right:2em;"><a href="/php/module-already-load.html">PHP module warning >></a></li>
+              </ul>
+            </nav>
         </div>
         <div class="col-sm-3 col-sm-offset-1">
           <div>
@@ -213,6 +220,7 @@ index.htnl-&gt;index.js(store=null)-&gt;container/root.js
           </div>
         </div>
       </div>
+      <hr>
     </div>
   </body>
 </html>
