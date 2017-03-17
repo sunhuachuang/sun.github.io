@@ -1,3 +1,5 @@
+# refactor in [lovesun](https://github.com/sunhuachuang/lovesun)
+
 # sun-blog
 this is personal blog by sunhuachuang
 ## sunhuachuang.github.io
