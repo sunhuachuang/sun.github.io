@@ -1,1 +1,13 @@
 theme: jekyll-theme-cayman
+title: Sun Huachuang - Happy Hacking
+email: huachuang20@gmail.com
+description: >-
+  Hello World !
+baseurl: ""
+url: ""
+twitter_username: sunhuachuang
+github_username:  sunhuachuang
+
+# Build settings
+plugins:
+  - jekyll-feed
